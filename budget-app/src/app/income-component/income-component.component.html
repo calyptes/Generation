@@ -1,0 +1,26 @@
+<div class="incomes">
+    <table>
+        <thead>
+            <tr>
+                <th id="title" colspan="3">Income</th>
+                <th id="total" colspan="2">Total: {{ total() + "€"}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="new-income">
+                <th id="id">ID</th>
+                <th id="date">Date<br><input type="date" [(ngModel)]="newIncome.date"></th>
+                <th id="name">Name<br><input [(ngModel)]="newIncome.name" placeholder="Insert"></th>
+                <th id="amount">Amount<br><input [(ngModel)]="newIncome.amount" placeholder="0"></th>
+                <th id="adds"><button class="add-button"(click)="adds()">+</button></th>
+            </tr>
+            <tr *ngFor="let income of incomes">
+                <td>{{ income.id }}</td>
+                <td>{{ income.date | date }}</td>
+                <td>{{ income.name }}</td>
+                <td>{{ income.amount + "€" }}</td>
+                <td id="removes"><button class="remove-button"(click)="removes(incomes.indexOf(income))">-</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

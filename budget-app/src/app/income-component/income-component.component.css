@@ -1,0 +1,67 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+#title {
+  background-color: #C1E1C1;
+}
+
+#total {
+  background-color: whitesmoke;
+}
+
+th, td {
+  border: 1px solid #DDDDDD;
+  padding: 8px;
+  text-align: left;
+}
+  
+input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.add-button {
+  background-color: #C1E1C1;
+  border-radius: 20%;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #84B08D;
+}
+
+.remove-button {
+  background-color: #FF9994;
+  border-radius: 20%;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: #FF6961;
+}

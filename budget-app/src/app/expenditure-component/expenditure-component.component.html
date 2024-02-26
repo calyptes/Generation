@@ -1,0 +1,26 @@
+<div class="expenditures">
+    <table>
+        <thead>
+            <tr>
+                <th id="title" colspan="3">Expenditure</th>
+                <th id="total" colspan="2">Total: {{ total() + "€"}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="new-expenditure">
+                <th id="id">ID</th>
+                <th id="date">Date<br><input type="date" [(ngModel)]="newExpenditure.date"></th>
+                <th id="name">Name<br><input [(ngModel)]="newExpenditure.name" placeholder="Insert"></th>
+                <th id="amount">Amount<br><input [(ngModel)]="newExpenditure.amount" placeholder="0"></th>
+                <th id="adds"><button class="add-button" (click)="adds()">+</button></th>
+            </tr>
+            <tr *ngFor="let expenditure of expenditures">
+                <td>{{ expenditure.id }}</td>
+                <td>{{ expenditure.date | date }}</td>
+                <td>{{ expenditure.name }}</td>
+                <td>{{ expenditure.amount + "€" }}</td>
+                <td id="removes"><button class="remove-button"(click)="removes(expenditures.indexOf(expenditure))">-</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
